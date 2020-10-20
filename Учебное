@@ -1,0 +1,46 @@
+1. Напишите функцию is_one_away(word1, word2), которая принимает в качестве аргументов два слова word1 и word2 и возвращает значение True,если слова имеют одинаковую длину 
+и отличаются ровно в 1 символе и False в противном случае.
+
+# объявление функции
+def is_one_away(word1, word2):
+    count=0
+    if len(word1)==len(word2):
+        sovp=1
+    for i,j in zip(word1,word2):
+        if i==j:
+            count+=1
+    if count==len(word1)-1 and sovp==1:
+        return True
+    else:
+        return False
+    pass
+
+# считываем данные
+txt1 = input()
+txt2 = input()
+# вызываем функцию
+print(is_one_away(txt1, txt2))
+
+
+2.Напишите функцию is_palindrome(text), которая принимает в качества аргумента строку text и возвращает значение True если указанный текст является палиндромом и False в 
+противном случае. 
+Примечание 1. Палиндром – это строка, которая читается одинаково в обоих направлениях
+Примечание 2. При проверке считайте большие и маленькие буквы одинаковыми, а также игнорируйте пробелы, а также символы , . ! ? -.
+
+# объявление функции
+def is_palindrome(text):
+    lis=[]
+    for i in txt.lower():
+        if i.isalpha():
+            lis.append(i)
+    m=''.join(lis)
+    if m[::]==m[::-1]:
+        return True
+    else:
+        return False
+    pass
+
+# считываем данные
+txt = input()
+# вызываем функцию
+print(is_palindrome(txt))
