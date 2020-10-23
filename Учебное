@@ -50,6 +50,7 @@ print(is_palindrome(txt))
 # объявление функции
 def is_pangram(text):
     count=0
+    m=text.lower()           #приводим вводимый текст к строчным буквам чтобы унифицировать сравнение по символам
     r = "".join(set(text))   #set используется чтобы удалить повторяющиеся символы в тексте
     lis=[]
     for i in r:
@@ -65,7 +66,7 @@ def is_pangram(text):
     pass
 
 # считываем данные
-text = input().lower()
+text = input()
 # вызываем функцию
 print(is_pangram(text))
 
